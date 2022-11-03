@@ -1,0 +1,10 @@
+type Query {
+    students: [Student],
+    countStudents: Int!,
+    books: [Book],
+    student(id: ID!): Student!
+}
+type Mutation {
+    newBook(code: String!, name: String!, studentId: ID!) : Book!
+}
+

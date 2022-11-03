@@ -1,0 +1,6 @@
+type Book {
+    id: ID!
+    code: String!
+    name: String!
+    student: Student!
+}

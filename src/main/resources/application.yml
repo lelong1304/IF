@@ -40,5 +40,11 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/ifmiage
-    username:
-    password:
+    username: postgres
+    password: longcodon4
+  graphql:
+    graphiql:
+      enabled: true
+graphql:
+  servlet:
+    mapping: /graphql

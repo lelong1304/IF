@@ -32,4 +32,7 @@ public class Student {
     @ToString.Exclude
     private List<Book> books;
 
+    public Student(Integer studentId) {
+        this.id = studentId;
+    }
 }

@@ -16,7 +16,6 @@
 	<properties>
 		<java.version>11</java.version>
 		<graphql.spring.starter.version>11.1.0</graphql.spring.starter.version>
-		<h2.version>1.4.200</h2.version>
 	</properties>
 	<dependencies>
 		<dependency>

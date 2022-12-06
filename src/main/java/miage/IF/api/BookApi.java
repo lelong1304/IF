@@ -29,5 +29,11 @@ public class BookApi {
         return bookService.save(book);
     }
 
+    @GetMapping("/test")
+    public Object test(){
+        return bookService.test();
+    }
+
+
 
 }

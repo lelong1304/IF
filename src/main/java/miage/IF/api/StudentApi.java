@@ -2,6 +2,7 @@ package miage.IF.api;
 
 import lombok.AllArgsConstructor;
 import miage.IF.api.dto.BookRequestDto;
+import miage.IF.api.dto.StudentRequestDto;
 import miage.IF.entity.Book;
 import miage.IF.entity.Student;
 import miage.IF.repository.BookEntityRepository;
@@ -14,8 +15,9 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("student")
+@RequestMapping("students")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class StudentApi {
     private final StudentService studentService;
     private final StudentEntityRepository studentEntityRepository;
@@ -30,6 +32,12 @@ public class StudentApi {
     public Student save(@RequestBody Student s){
         return studentService.save(s);
     }
+
+    @PostMapping("/create")
+    public Student saveStudent(@RequestBody StudentRequestDto s){
+        return studentService.saveStudent(s);
+    }
+
 
     @PutMapping()
     public Student update(@RequestBody Student s, @RequestParam String email){ // students?email=david@gmail.com

@@ -2,6 +2,7 @@ package miage.IF.service;
 
 import lombok.AllArgsConstructor;
 import miage.IF.api.dto.BookRequestDto;
+import miage.IF.api.dto.StudentRequestDto;
 import miage.IF.entity.Book;
 import miage.IF.entity.Student;
 import miage.IF.repository.BookEntityRepository;
@@ -60,6 +61,15 @@ public class StudentService {
         }
         Student student = studentOptional.get();
         student.setEmail(email);
+        return studentEntityRepository.save(student);
+    }
+
+    public Student saveStudent(StudentRequestDto s) {
+        Student student = new Student();
+        student.setFirstName(s.getFirstName());
+        student.setEmail(s.getEmail());
+        student.setLastName(s.getLastName());
+        student.setAge(s.getAge());
         return studentEntityRepository.save(student);
     }
 }

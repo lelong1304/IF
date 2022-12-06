@@ -38,11 +38,3 @@ public class Query implements GraphQLQueryResolver {
     }
 
 }
-/*
-query getStudents {
-  student: student(id: 9) {
-    id
-    firstName
-  }
-}
- */
